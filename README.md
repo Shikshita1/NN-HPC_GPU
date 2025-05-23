@@ -3,7 +3,9 @@ What worked?
 1. Create virtual environment using packages available in HPC (I am using Stanford cluster which uses linux-64) and activate the environment.
 
 $ python -m venv /home/groups/....
+
 $ source /home/groups/.../pytorch-gpu/bin/activate
+
 
 *Package examples:
 
@@ -17,15 +19,15 @@ pip install notebook
 2. Load pytorch from the HPC itself. I tried using pytorch channel to install cuda-enabled pytorch, but it DID NOT work for my HPC.
    I also tried making my own conda environmen and installing pytorch with CUDA, but it did not work in the HPC. So I used pytorch available in the HPC.
 
-# Load modules required for PyTorch
+* Load modules required for PyTorch
 $ module purge
 $ module load math
 $ module load py-pytorch/2.4.1_py312
 
-# Activate your venv (adjust path if needed)
+* Activate your venv (adjust path if needed)
 $ source /home/groups/.../pytorch-gpu/bin/activate
 
-# OPTIONAL: Set TMPDIR if you had issues before
+* OPTIONAL: Set TMPDIR if you had issues before
 $ export TMPDIR=/home/groups/.../tmp
 
 3. Confirm if required pytorch is installed:
