@@ -21,7 +21,9 @@ pip install notebook
 
 * Load modules required for PyTorch
 $ module purge
+
 $ module load math
+
 $ module load py-pytorch/2.4.1_py312
 
 * Activate your venv (adjust path if needed)
@@ -29,20 +31,25 @@ $ source /home/groups/.../pytorch-gpu/bin/activate
 
 OR
 * Activate your virtualenv
+  
 source /home/groups/gorelick/Shikshita_all/ckshita_venv/pytorch-gpu/bin/activate
 
 * Load PyTorch module
 module purge
+
 module load math
+
 module load py-pytorch/2.4.1_py312
 
 
 * OPTIONAL: Set TMPDIR if you had issues before
+  
 $ export TMPDIR=/home/groups/.../tmp
 
 3. Confirm if required pytorch is installed:
 
 python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+
 
 4. Register jupyter kernel (One-time)
 
@@ -56,13 +63,16 @@ $ jupyter notebook
 ** Extra tips:
 1. If memory is exceeded, then you can do this to access memory of the group.
 $ mkdir -p /home/groups/....
+
 $ python -m venv /home/groups/....
+
 $ source /home/groups/.../pytorch-gpu/bin/activate
 
 
-2. You can also make a tmp folder, if your space is not enough even for the temporary installation files.
+3. You can also make a tmp folder, if your space is not enough even for the temporary installation files.
 
 $ mkdir -p /home/groups/.../tmp
+
 $ export TMPDIR=/home/groups/.../tmp
 
   * For permanently making it as tmp folder, do this:
