@@ -10,10 +10,15 @@ $ source /home/groups/.../pytorch-gpu/bin/activate
 *Package examples:
 
 pip install --upgrade pip
+
 pip install numpy matplotlib tqdm ipykernel
+
 pip install ipython
+
 pip install jupyter
+
 pip install pyzmq
+
 pip install notebook
 
 2. Load pytorch from the HPC itself. I tried using pytorch channel to install cuda-enabled pytorch, but it DID NOT work for my HPC.
