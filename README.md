@@ -27,6 +27,16 @@ $ module load py-pytorch/2.4.1_py312
 * Activate your venv (adjust path if needed)
 $ source /home/groups/.../pytorch-gpu/bin/activate
 
+OR
+* Activate your virtualenv
+source /home/groups/gorelick/Shikshita_all/ckshita_venv/pytorch-gpu/bin/activate
+
+* Load PyTorch module
+module purge
+module load math
+module load py-pytorch/2.4.1_py312
+
+
 * OPTIONAL: Set TMPDIR if you had issues before
 $ export TMPDIR=/home/groups/.../tmp
 
@@ -38,7 +48,7 @@ python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 
 $ python -m ipykernel install --user --name pytorch-gpu --display-name "PyTorch GPU (venv)"
 
-5. Actiacte jupyter notebook in terminal and copy URL to the VS code text editor of HPC. Then use PyTorch GPU as the kernel.
+5. Activate jupyter notebook in terminal and copy URL to the VS code text editor of HPC. Then use PyTorch GPU as the kernel.
 
 $ jupyter notebook
 
